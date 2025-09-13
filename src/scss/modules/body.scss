@@ -1,0 +1,16 @@
+@use "../base/vars";
+@use "../fonts";
+
+body {
+    font-family: vars.$mainFontFamily;
+    font-weight: 400;
+    h1 {
+        color: vars.$lightTextColor;
+    }
+}
+
+.container {
+    max-width: vars.$containerWidth;
+    padding: 0 vars.$containerPadding;
+    margin: 0 auto;
+}
