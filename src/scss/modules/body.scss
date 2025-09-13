@@ -1,12 +1,15 @@
 @use "../base/vars";
 @use "../fonts";
 
+html {
+    font-size: vars.$basicFontSize;
+}
+
 body {
     font-family: vars.$mainFontFamily;
     font-weight: 400;
-    h1 {
-        color: vars.$lightTextColor;
-    }
+    color: vars.$mainTextColor;
+    background-color: vars.$lightBgColor;
 }
 
 .container {

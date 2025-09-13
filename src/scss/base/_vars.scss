@@ -1,47 +1,28 @@
 // Text Colors
-$lightTextColor: #ffecc2;
-$darkTextColor: #264236;
-$paleTextColor: #666d5a; //#848d74;
-$mediumTextColor: #4a522b; //#96a757;
+$mainTextColor: #6b6b6b;
+$mediumTextColor: #595959;
+$darkTextColor: #323232;
+$lightTextColor: #ffffff;
 
 //  Background Colors
-$lightBgColor: #ffecc2;
-$mediumBgColor: #7d8b49; //#96a757;
-$mediumBgColorOp: rgba(125, 139, 73, 0.92);
-$darkBgColor: #264236;
-$pickedBgColor: #e8c01b;
-
-//  Border Colors
-$lightBorderColor: #ffecc2;
-$darkestBorderColor: #264236;
-$darkBorderColor: #4a522b; // #96a757;
+$lightBgColor: #ffffff;
+$darkBgColor: #87ce66;
+$footerBgColor: #323232;
 
 // Gradient
-$maskGrad: linear-gradient(
-    270deg,
-    rgba(125, 139, 73, 0.3) 0%,
-    rgba(125, 139, 73, 0.4) 50%,
-    rgba(125, 139, 73, 0.6) 100%
-);
+$mainGrad: linear-gradient(#86cd65 0%, #63ab41 100%);
 
 // Fonts
-$mainFontFamily: "Poppins", "Open Sans", sans-serif;
-$titleFontFamily: "Skincake", "Pacifico", sans-serif;
-
-$basicFontSize: 16px;
-
-$pMiniFontSize: 0.5rem;
-$pFontSize: 1rem;
-$subtFontSize: 1.5rem;
-$tFontSize: 3rem;
+$mainFontFamily: "Gilroy", "Open Sans", sans-serif;
+$basicFontSize: 15px;
 
 //  Borders
-$smallBorderRadius: 1.875em;
-$bigBorderRadius: 3.75em;
+$smallBorderRadius: 1rem;
+$bigBorderRadius: 1.33rem;
 
 //  Container
-$containerPadding: 20px;
-$containerWidth: 1184px + ($containerPadding * 2);
+$containerPadding: 15px;
+$containerWidth: 1200px + ($containerPadding * 2);
 
 //  Transitions
 $basicTrans: all 0.3s;
@@ -50,11 +31,11 @@ $basicTrans: all 0.3s;
 $basicScale: scale(1.3);
 
 //  Opacity
-$basicOpacity: 0.6;
+$basicOpacity: 0.8;
 
 // Paddings & Margins
-$mainPadding: 20px;
-$mainMargin: 20px;
+$mainPadding: 15px;
+$mainMargin: 15px;
 
 // Medias
 $mediaTablet: 992px;
