@@ -1,6 +1,6 @@
 # Crimea Website
 
-**Single page website**. A touristic website for traveling to Crimea.
+**Single page** touristic **website** for traveling to Crimea. **Based on** a design from Internet.
 
 ## Original Design Layout
 
