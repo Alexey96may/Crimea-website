@@ -1,17 +1,19 @@
 <header class="header">
-    <div class="container">
-        <div class="logo_wrapper">
-            <div class="logo">
-                <a href="#">
-                    <svg class="logo__img">
-                        <use href="./img/icons/icons.svg#logo"></use>
-                    </svg>
-                </a>
+    <div class="container header__container">
+        <div class="logo">
+            <div class="logo__img-wrapper" aria-label="logo">
+                <svg class="logo__img" aria-label="Logo image">
+                    <use href="./img/icons/icons.svg#logo"></use>
+                </svg>
             </div>
-            <div class="logo__text"><a href="#">Крым</a></div>
+
+            <div class="logo__text">
+                <a href="#" aria-label="to start page">Крым</a>
+            </div>
         </div>
-        <nav class="nav">
-            <ul class="nav__list">
+
+        <nav class="nav" aria-label="Main navigation">
+            <ul class="nav__list" aria-label="Navigation list">
                 <li class="nav__item"><a href="#">О проекте</a></li>
                 <li class="nav__item"><a href="#">Карта</a></li>
                 <li class="nav__item"><a href="#">История</a></li>
@@ -20,9 +22,29 @@
             </ul>
         </nav>
 
-        <div class="burger">
-            <svg class="burger__img">
-                <use href="./img/icons/icons.svg#burger"></use>
+        <div class="burger" aria-label="Mobile menu button">
+            <svg
+                class="burger__img"
+                aria-label="Menu button image"
+                viewBox="0 0 56 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    class="burger__top"
+                    d="M 29.999731 32.999286 L 69.999432 32.999286 C 83.10065 32.999286 84.37826 64.802491 76.900353 66.420021 C 52.286914 71.750966 85.916886 14.082074 64.142578 35.859552 L 35.856584 64.141671 "
+                    transform="matrix(0.853034,0,0,0.792103,-14.524375,-23.627106)"
+                />
+                <path
+                    class="burger__middle"
+                    d="M 69.999432 49.998146 C 69.999432 49.998146 37.784446 49.998146 29.999731 49.998146 C 22.215015 49.998146 23.570471 45.35761 23.570471 41.427209 C 23.570471 35.534074 29.647129 29.64587 35.856584 35.859552 C 42.070619 42.068303 64.142578 64.141671 64.142578 64.141671 "
+                    transform="matrix(0.853034,0,0,0.792103,-14.524375,-23.627106)"
+                />
+                <path
+                    class="burger__bottom"
+                    d="M 69.573562 67.07591 L 29.573861 67.07591 C 16.477221 67.07591 15.195033 35.272704 22.677519 33.650243 C 47.286379 28.324229 13.660986 85.98819 35.435294 64.215643 L 63.716708 35.933525 "
+                    transform="matrix(0.853034,0,0,0.792103,-14.524375,-23.627106)"
+                />
             </svg>
         </div>
     </div>
