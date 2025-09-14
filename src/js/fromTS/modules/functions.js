@@ -1,6 +1,6 @@
 export function isWebp() {
     function testWebp(cb) {
-        var webp = new Image();
+        let webp = new Image();
         webp.onload = webp.onerror = function () {
             cb(webp.height == 2);
         };
@@ -9,7 +9,7 @@ export function isWebp() {
                 "AgSSNtse/cXjxyCCmrYNWPwmHRH9jwMA";
     }
     testWebp(function (support) {
-        var className = support === true ? "webp" : "no-webp";
+        let className = support === true ? "webp" : "no-webp";
         document.documentElement.classList.add(className);
     });
 }
