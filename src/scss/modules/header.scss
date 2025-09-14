@@ -68,8 +68,8 @@
 }
 
 .burger {
-    width: 34px;
-    height: 18px;
+    width: 32px;
+    height: 20px;
     align-self: center;
     cursor: pointer;
     display: none;
@@ -98,50 +98,41 @@
         transition: stroke-dasharray 800ms, stroke-dashoffset 800ms,
             stroke 800ms;
         stroke: vars.$darkBgColor;
-        stroke-width: 3.5;
+        stroke-width: 2;
         stroke-linecap: round;
     }
 
     .burger__top {
-        stroke-dasharray: 40 172;
-        stroke: vars.$darkTextColor;
+        stroke-dasharray: 26 172;
+        stroke: #2e2e2e;
     }
 
     .burger__middle {
-        stroke-dasharray: 24 111;
-        stroke: vars.$darkTextColor;
+        stroke-dasharray: 17 111;
+        stroke: #2e2e2e;
     }
 
     .burger__bottom {
-        stroke-dasharray: 13 172;
-    }
-
-    &:hover .burger__top {
-        stroke-dashoffset: -132px;
-        stroke: vars.$darkBgColor;
-    }
-
-    &:hover .burger__middle {
-        stroke-dasharray: 40 172;
-        stroke-dashoffset: -71px;
-        stroke: vars.$darkBgColor;
-    }
-
-    &:hover .burger__bottom {
-        stroke-dashoffset: -132px;
+        stroke-dasharray: 11 172;
     }
 }
 
-.cancel__img {
-    stroke-width: 2;
-    stroke-dashoffset: 0;
-    stroke-dasharray: 1000;
-    stroke: vars.$darkBgColor;
-    transition: all 0.6s ease;
+.burger__img--cancel {
+    .burger__top {
+        stroke-dashoffset: -55.2px;
+        stroke-dasharray: 19 172;
+        stroke: vars.$darkBgColor;
+    }
 
-    &:hover {
-        stroke-width: 2;
-        stroke-dashoffset: -22;
+    .burger__middle {
+        stroke-dasharray: 19 172;
+        stroke-dashoffset: -42px;
+        stroke: vars.$darkBgColor;
+    }
+
+    .burger__bottom {
+        stroke-dashoffset: -65.3px;
+        stroke-dasharray: 19 172;
     }
 }
 
