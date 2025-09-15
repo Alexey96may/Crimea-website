@@ -1,0 +1,5 @@
+@mixin imgAdaptive($aRatio: 1 / 1, $oFit: cover) {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 137/75;
+}
