@@ -4,6 +4,8 @@
 
 .hero {
     position: relative;
+    max-height: 602px;
+    margin-top: 40px;
 
     &__container {
         position: absolute;
@@ -14,6 +16,7 @@
 .hero__img-container {
     margin: 0 auto;
     max-width: 1296px;
+    position: relative;
 }
 
 .hero__photo-wrapper {
@@ -33,7 +36,7 @@
         top: 50%;
         left: 0;
         right: 0;
-        height: 100%;
+        bottom: 0;
         background: linear-gradient(
             180deg,
             rgb(0, 0, 0, 0),
@@ -78,4 +81,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    translate: -17px -50%;
+    font-size: 35px;
+    color: vars.$lightTextColor;
+    font-weight: 700;
+    padding: 13px 48px 13px 34px;
+    background-color: vars.$darkBgColor;
+    border-radius: 20px 50px 0px 20px;
 }
