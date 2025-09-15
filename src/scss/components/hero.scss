@@ -1,9 +1,16 @@
 @use "../base/vars";
+@use "../base/mixins";
+@use "../components/card-hero";
 
 .hero {
+    position: relative;
+
+    &__container {
+        position: absolute;
+        inset: 0;
+    }
 }
-.container {
-}
+
 .hero__img-container {
     margin: 0 auto;
     max-width: 1296px;
@@ -13,20 +20,62 @@
     max-width: 1096px;
     max-height: 600px;
     overflow: hidden;
+    position: relative;
+    border-radius: vars.$bigBorderRadius;
 
     img {
-        object-fit: cover;
-        width: 100%;
-        aspect-ratio: 137/75;
+        @include mixins.imgAdaptive(1.83);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: linear-gradient(
+            180deg,
+            rgb(0, 0, 0, 0),
+            rgb(0, 0, 0, 0.98)
+        );
     }
 }
+
 .hero__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 58px;
+    max-width: 376px;
 }
+
 .hero__title {
+    font-size: 65px;
+    color: vars.$lightTextColor;
+    font-weight: 700;
 }
+
 .hero__descr {
+    font-size: 35px;
+    color: vars.$lightTextColor;
+    line-height: 1;
+    letter-spacing: 0.045em;
 }
+
 .cards {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    right: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: min(47px, 5vw);
+    max-width: 667px;
 }
+
 .router {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
