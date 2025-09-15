@@ -1,87 +1,21 @@
 <section class="hero" aria-label="Главная секция">
-  <div class="container">
-    <div class="hero__photo-wrapper">
-      <div class="hero__photo" aria-label="Главная картинка"></div>
+    <div class="container">
+        <div class="hero__photo-wrapper">
+            <img src="№" alt="Ласточкино гнездо" />
+        </div>
+        <div class="hero__info">
+            <h1 class="hero__title">Крым</h1>
+            <p class="hero__descr">Создай путешествие твоей мечты</p>
+        </div>
+        <div class="cards" aria-label="Карточки главной секции">
+            <!-- prettier-ignore -->
+            @@include('./card-hero.html', {"classes": "", "imgSrc": "#", "title": "Транспорт", "subtitle": "От и до", "description": "Только здесь можно покататься на самом протяженном в мире троллейбусном маршруте, который соединяет Ялту и Симферополь и составляет 90 км"})
+            @@include('./card-hero.html', {"classes": "", "imgSrc": "#", "title": "Климат", "subtitle": "Три в одном", "description": "В Крыму встречаются сразу три климатических зоны. Здесь можно побывать в субтропиках, покорить горные вершины и отдать свое сердце бескрайней степи"})
+            @@include('./card-hero.html', {"classes": "", "imgSrc": "#", "title": "Культура", "subtitle": "Место силы", "description": "Тут творили Айвазовский и Грин, Толстой и Чехов, здесь была создана группа “Кино” и снято множество популярных фильмов. Ищите знакомые пейзажи на экране! "})
+            @@include('./card-hero.html', {"classes": "", "imgSrc": "#", "title": "Флора", "subtitle": "Цветет и пахнет", "description": "Степные тюльпаны, невинные подснежники, лавандовые поля и можжевеловые рощи… Крым – это 2700 видов растений, среди которых экзотические и редкие виды из Красной книги"})
+        </div>
+        <div class="router" aria-label="Стилизированная секция маршрута">
+            Проложи маршрут
+        </div>
     </div>
-    <div class="hero__info">
-      <h1 class="hero__title">Крым</h1>
-      <p class="hero__descr">Создай путешествие твоей мечты</p>
-    </div>
-    <div class="cards" aria-label="Карточки главной секции">
-      <div class="card hero__card" aria-label="Карточка главной секции">
-        <div class="card__main">
-          <h3 class="card__title" aria-label="Заголовок карточки">Транспорт</h3>
-          <h4 class="card__subtitle" aria-label="Подзаголовок карточки">
-            От и до
-          </h4>
-        </div>
-        <p class="card__descr">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat vero
-          incidunt perferendis consequuntur voluptas voluptatibus quia modi ab
-          autem optio architecto, deserunt minima perspiciatis facere eum ea
-          error iste? Autem.
-        </p>
-        <div class="card__img-wrapper">
-          <img src="#" alt="card logo" />
-        </div>
-      </div>
-
-      <div class="card hero__card" aria-label="Карточка главной секции">
-        <div class="card__main">
-          <h3 class="card__title" aria-label="Заголовок карточки">Климат</h3>
-          <h4 class="card__subtitle" aria-label="Подзаголовок карточки">
-            Три в одном
-          </h4>
-        </div>
-        <p class="card__descr">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-          pariatur omnis fuga fugiat harum sapiente eius? Natus fugiat optio
-          architecto velit harum illo perspiciatis ipsum impedit, voluptatum
-          molestiae saepe quo!
-        </p>
-        <div class="card__img-wrapper">
-          <img src="#" alt="card logo" />
-        </div>
-      </div>
-
-      <div class="card hero__card" aria-label="Карточка главной секции">
-        <div class="card__main">
-          <h3 class="card__title" aria-label="Заголовок карточки">Культура</h3>
-          <h4 class="card__subtitle" aria-label="Подзаголовок карточки">
-            Место силы
-          </h4>
-        </div>
-        <p class="card__descr">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, ex
-          vel provident necessitatibus deleniti consequatur architecto officiis
-          tempore doloribus autem facilis iste ipsam eos blanditiis
-          consequuntur, natus, alias fugit vero.
-        </p>
-        <div class="card__img-wrapper">
-          <img src="#" alt="card logo" />
-        </div>
-      </div>
-
-      <div class="card hero__card" aria-label="Карточка главной секции">
-        <div class="card__main">
-          <h3 class="card__title" aria-label="Заголовок карточки">Флора</h3>
-          <h4 class="card__subtitle" aria-label="Подзаголовок карточки">
-            Цветет и пахнет
-          </h4>
-        </div>
-        <p class="card__descr">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit
-          fugiat incidunt magnam necessitatibus! Atque aspernatur vero,
-          provident eveniet sit tenetur labore corrupti repellendus magni
-          quibusdam ullam qui asperiores veniam. Eius?
-        </p>
-        <div class="card__img-wrapper">
-          <img src="#" alt="card logo" />
-        </div>
-      </div>
-    </div>
-    <div class="router" aria-label="Стилизированная секция маршрута">
-      Проложи маршрут
-    </div>
-  </div>
 </section>
