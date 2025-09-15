@@ -4,7 +4,21 @@
 }
 .container {
 }
+.hero__img-container {
+    margin: 0 auto;
+    max-width: 1296px;
+}
+
 .hero__photo-wrapper {
+    max-width: 1096px;
+    max-height: 600px;
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 137/75;
+    }
 }
 .hero__info {
 }
