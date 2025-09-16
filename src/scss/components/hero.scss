@@ -7,7 +7,7 @@
     max-height: 602px;
     margin-top: 40px;
 
-    @media (max-width: 1120px) {
+    @media (max-width: 1165px) {
         max-height: none;
         margin-top: 0px;
     }
@@ -20,7 +20,7 @@
     user-select: none;
     padding-left: 17px;
 
-    @media (max-width: 1120px) {
+    @media (max-width: 1165px) {
         padding: 0 14px;
     }
 }
@@ -52,7 +52,7 @@
         border-radius: vars.$bigBorderRadius;
     }
 
-    @media (max-width: 1120px) {
+    @media (max-width: 1165px) {
         margin-bottom: 62px;
     }
 
@@ -69,12 +69,12 @@
     position: absolute;
     bottom: 0;
     left: min(64px, 3vw);
-    padding: 0 0 58px;
-    max-width: 376px;
+    padding: 0 0 58px 15px;
+    max-width: 389px;
     z-index: 6;
     user-select: text;
 
-    @media (max-width: 1120px) {
+    @media (max-width: 1165px) {
         position: static;
         padding: 0 0 0 47px;
         max-width: 326px;
@@ -97,7 +97,7 @@
     text-transform: uppercase;
     margin-bottom: 7px;
 
-    @media (max-width: 1120px) {
+    @media (max-width: 1165px) {
         font-size: 50px;
         color: #2e2e2e;
         margin-bottom: 14px;
@@ -121,7 +121,7 @@
     letter-spacing: 0.045em;
     z-index: 9;
 
-    @media (max-width: 1120px) {
+    @media (max-width: 1165px) {
         font-size: 25px;
         color: vars.$mainTextColor;
     }
@@ -150,7 +150,11 @@
     column-gap: min(47px, 5vw);
     row-gap: min(34px, 5vw);
 
-    @media (max-width: 1120px) {
+    max-width: vars.$containerWidth;
+    padding: 0 vars.$containerPadding;
+    margin: 0 auto;
+
+    @media (max-width: 1165px) {
         position: static;
         justify-content: flex-start;
         flex-wrap: nowrap;
@@ -182,7 +186,7 @@
     user-select: none;
     pointer-events: none;
 
-    @media (max-width: 1120px) {
+    @media (max-width: 1165px) {
         display: none;
     }
 }
@@ -200,7 +204,7 @@
     border-radius: 20px 50px 0px 20px;
     z-index: 9;
 
-    @media (max-width: 1120px) {
+    @media (max-width: 1165px) {
         font-size: 30px;
         top: auto;
         bottom: 0;
