@@ -169,6 +169,6 @@
 }
 
 .card-hero:first-child .card-hero__img-wrapper,
-.card-hero:last-child .card-hero__img-wrapper {
+.card-hero:nth-child(4) .card-hero__img-wrapper {
     transform: rotate(-7deg);
 }
