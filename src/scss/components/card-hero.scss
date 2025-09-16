@@ -3,13 +3,43 @@
 
 .card-hero {
     max-width: 310px;
-    background-color: #ffffff;
+    background-color: vars.$lightBgColor;
     box-shadow: 4px 4px 50px #000000;
     border-radius: vars.$bigBorderRadius;
     min-width: 310px;
     height: 228px;
     padding: 28px 20px 25px 28px;
     position: relative;
+    cursor: pointer;
+    transition: vars.$basicTrans;
+    background-position: 0% 0%;
+    background: linear-gradient(#ffffff 50%, #86cd65 50%, #63ab41 100%);
+    background-size: 200% 200%;
+
+    &:first-child {
+        z-index: 9;
+    }
+
+    &:hover {
+        color: vars.$lightTextColor;
+        background-position: -100% -100%;
+
+        .card-hero__title {
+            color: vars.$lightTextColor;
+        }
+
+        .card-hero__subtitle {
+            color: vars.$lightTextColor;
+        }
+
+        .card-hero__img-wrapper {
+            background-position: 100% 100%;
+        }
+
+        svg {
+            fill: vars.$darkBgColor;
+        }
+    }
 }
 
 .card-hero__text {
@@ -23,6 +53,7 @@
     font-weight: 700;
     margin-bottom: 3px;
     text-align: center;
+    transition: vars.$basicTrans;
 }
 
 .card-hero__subtitle {
@@ -31,6 +62,7 @@
     font-weight: 600;
     margin-bottom: 23px;
     text-align: center;
+    transition: vars.$basicTrans;
 }
 
 .card-hero__descr {
@@ -39,19 +71,30 @@
 }
 
 .card-hero__img-wrapper {
-    max-width: 90px;
-    max-height: 90px;
+    width: 90px;
+    height: 90px;
     overflow: hidden;
     position: absolute;
     top: -12px;
     left: -12px;
-    background: vars.$mainGrad;
+    background: linear-gradient(
+        #86cd65 25%,
+        #63ab41 50%,
+        #ffffff 50%,
+        #ffffff 100%
+    );
+    background-position: 0% 0%;
+    background-size: 200% 200%;
     border-radius: vars.$bigBorderRadius;
     padding: 16px;
     transform: rotate(7deg);
+    transition: vars.$basicTrans;
+    z-index: 9;
 
-    img {
-        @include mixins.imgAdaptive(1/1, contain);
+    svg {
+        @include mixins.imgAdaptive(1, contain);
+        fill: vars.$lightBgColor;
+        transition: vars.$basicTrans;
     }
 }
 
