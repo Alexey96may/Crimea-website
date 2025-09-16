@@ -2,14 +2,14 @@
 @use "../base/mixins";
 
 .card-hero {
-    max-width: 310px;
     background-color: vars.$lightBgColor;
     box-shadow: 4px 4px 50px #000000;
     border-radius: vars.$bigBorderRadius;
-    min-width: 310px;
+    width: 310px;
     height: 228px;
     padding: 28px 20px 25px 28px;
     position: relative;
+    flex-shrink: 0;
     cursor: pointer;
     transition: vars.$basicTrans;
     background-position: 0% 0%;
@@ -40,6 +40,18 @@
             fill: vars.$darkBgColor;
         }
     }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        width: 250px;
+        height: 180px;
+        padding: 20px 30px 35px 25px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        width: 233px;
+        height: 157px;
+        padding: 17px 25px 31px 19px;
+    }
 }
 
 .card-hero__text {
@@ -51,9 +63,23 @@
     font-size: 24px;
     color: vars.$darkTextColor;
     font-weight: 700;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     text-align: center;
     transition: vars.$basicTrans;
+
+    @media (max-width: vars.$mediaTablet) {
+        font-size: 21px;
+    }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        font-size: 19px;
+        margin-bottom: 2px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 17px;
+        margin-bottom: 1px;
+    }
 }
 
 .card-hero__subtitle {
@@ -63,11 +89,37 @@
     margin-bottom: 23px;
     text-align: center;
     transition: vars.$basicTrans;
+
+    @media (max-width: vars.$mediaTablet) {
+        font-size: 15px;
+    }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
 }
 
 .card-hero__descr {
     font-size: 16px;
     overflow: hidden;
+
+    @media (max-width: vars.$mediaTablet) {
+        font-size: 15px;
+    }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        font-size: 14px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 12px;
+    }
 }
 
 .card-hero__img-wrapper {
@@ -95,6 +147,24 @@
         @include mixins.imgAdaptive(1, contain);
         fill: vars.$lightBgColor;
         transition: vars.$basicTrans;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        width: 75px;
+        height: 75px;
+        padding: 14px;
+    }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        width: 65px;
+        height: 65px;
+        padding: 12px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        width: 52px;
+        height: 52px;
+        padding: 10px;
     }
 }
 
