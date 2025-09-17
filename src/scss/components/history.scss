@@ -1,1 +1,16 @@
-@use '../base/vars';
+@use "../base/vars";
+
+.history {
+    position: relative;
+    margin-top: -400px;
+    padding-top: 600px;
+    background: url("../img/history_bg.png") top center / 100% 100% no-repeat,
+        url("../img/seamen_memorial.png") top right / 398px 626px no-repeat;
+    height: 5683px;
+}
+
+.history__title {
+}
+
+.history__cards {
+}
