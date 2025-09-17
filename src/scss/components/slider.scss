@@ -1,1 +1,209 @@
-@use '../base/vars';
+@use "../base/vars";
+@use "../base/mixins";
+
+@keyframes sliderButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slider {
+    position: relative;
+    margin-bottom: 181px;
+}
+
+.container {
+}
+
+.display--none {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.slide__wrapper {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    padding: 36px 0 36px 0; //????
+}
+
+.slide__image {
+    @include mixins.position(absolute, -1, top, right, 50%, 0);
+    width: 426px;
+    height: 291px;
+    overflow: hidden;
+    border-radius: 20px;
+    translate: 0 -50%;
+
+    img {
+        @include mixins.imgAdaptive(1.46);
+    }
+}
+
+.slide__text {
+    max-width: 796px;
+    background-color: vars.$lightBgColor;
+    padding: 48px 326px 36px 58px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.slide__title {
+    font-size: 24px;
+    color: vars.$darkTextColor;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.slide__subtitle {
+    font-size: 15px;
+    color: #595959;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.slide__paragraphs {
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.25;
+    }
+
+    p + p {
+        margin-top: 1.25em;
+    }
+}
+
+.slider__left,
+.slider__right {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    cursor: pointer;
+    padding: 10px 5px;
+    border: none;
+    background-color: unset;
+    user-select: none;
+
+    &:hover {
+        animation: sliderButton 0.8s ease-out;
+
+        svg {
+            fill: vars.$mediumTextColor;
+        }
+
+        @media (hover: none) {
+            fill: vars.$mediumTextColor;
+        }
+    }
+
+    svg {
+        width: 36px;
+        height: 36px;
+        fill: vars.$lightBgColor;
+        display: block;
+        transition: vars.$basicTrans;
+    }
+}
+
+.slider__left {
+    left: 27px;
+
+    &:hover {
+        @media (hover: none) {
+            svg {
+                fill: vars.$lightBgColor;
+            }
+        }
+    }
+}
+
+.slider__right {
+    right: 27px;
+
+    svg {
+        width: 36px;
+        height: 36px;
+        fill: vars.$darkBgColor;
+        transform: rotateZ(180deg);
+    }
+
+    &:hover {
+        @media (hover: none) {
+            svg {
+                fill: vars.$darkBgColor;
+            }
+        }
+    }
+}
+
+.slider__bar {
+    @include mixins.position(absolute, -1, bottom, left, 0, 188px);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.slider__indicator {
+    cursor: pointer;
+    padding: 2px 4px;
+    border: none;
+    background-color: unset;
+    user-select: none;
+
+    &:hover {
+        svg {
+            stroke: vars.$mediumTextColor;
+            animation: sliderButton 0.8s ease-out;
+
+            @media (hover: none) {
+                stroke: vars.$lightBgColor;
+            }
+        }
+    }
+
+    svg {
+        width: 8px;
+        height: 8px;
+        stroke: vars.$lightBgColor;
+        fill: none;
+        transition: vars.$basicTrans;
+    }
+}
+
+.slider__indicator--active {
+    &:hover {
+        cursor: auto;
+
+        svg {
+            stroke: none;
+            fill: vars.$lightBgColor;
+            animation: none;
+        }
+    }
+
+    svg {
+        stroke: none;
+        width: 39px;
+        height: 8px;
+        fill: vars.$lightBgColor;
+    }
+}
