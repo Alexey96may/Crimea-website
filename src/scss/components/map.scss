@@ -1,1 +1,40 @@
-@use '../base/vars';
+@use "../base/vars";
+
+.map {
+    margin: -280px 0 53px 0;
+
+    @media (max-width: vars.$heroChange) {
+        margin: 0 0 40px 0;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        margin: 0 0 21px 0;
+    }
+}
+
+.map__wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 4px 4px 20px rgb(0, 0, 0, 0.1);
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: vars.$heroChange) {
+        margin-top: 0 0 0 21px;
+        height: 500px;
+        border-radius: 15px;
+        border: unset;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        height: 390px;
+        border-radius: 10px;
+        margin-top: 0 0 0 21px;
+    }
+}
