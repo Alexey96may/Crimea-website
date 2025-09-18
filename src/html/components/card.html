@@ -6,12 +6,14 @@
     }
 
     <div class="card__text" aria-label="Текстовое поле карточки">
+        @@if (years) {
         <div class="card__years" aria-label="Временной отрезок">
             <span>@@years</span>
             @@if (years2) {
             <span>@@years2</span>
             }
         </div>
+        }
         <h3 class="card__title">@@title</h3>
         <div class="card__paragraphs" aria-label="Поле параграфов">
             @@for (var i = 0; i < paragraphs.length; i++) {
