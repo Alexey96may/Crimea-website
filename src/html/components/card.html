@@ -1,14 +1,22 @@
 <div class="card @@classes" aria-label="Историческая карточка">
-  <div class="card__image" aria-label="Поле изображения карточки">
-    <img src="@@imgSrc" alt="@@imgAlt" />
-  </div>
-  <div class="card__text" aria-label="Текстовое поле карточки">
-    <div class="card__years" aria-label="Временной отрезок">@@years</div>
-    <h3 class="card__title">@@title</h3>
-    <div class="card__paragraphs" aria-label="Поле параграфов">
-      @@for (var i = 0; i < paragraphs.length; i++) {
-      <p>`+paragraphs[i]+`</p>
-      }
+    @@if (imgSrc !== '' && imgSrc !== '#') {
+    <div class="card__image" aria-label="Поле изображения карточки">
+        <img src="@@imgSrc" alt="@@imgAlt" />
     </div>
-  </div>
+    }
+
+    <div class="card__text" aria-label="Текстовое поле карточки">
+        <div class="card__years" aria-label="Временной отрезок">
+            <span>@@years</span>
+            @@if (years2) {
+            <span>@@years2</span>
+            }
+        </div>
+        <h3 class="card__title">@@title</h3>
+        <div class="card__paragraphs" aria-label="Поле параграфов">
+            @@for (var i = 0; i < paragraphs.length; i++) {
+            <p>`+paragraphs[i]+`</p>
+            }
+        </div>
+    </div>
 </div>
