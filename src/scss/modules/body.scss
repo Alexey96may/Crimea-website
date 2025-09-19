@@ -12,6 +12,8 @@ body {
     background-color: vars.$lightBgColor;
     position: relative;
     line-height: 1.25;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .body__fixed {
