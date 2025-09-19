@@ -42,7 +42,7 @@
 
 .slide__wrapper {
     position: relative;
-    z-index: 4;
+    z-index: 5;
     max-width: 940px;
     margin: 0 auto;
     padding: 36px 0 36px 0;
@@ -103,7 +103,7 @@
         overflow: visible;
         max-width: 100%;
         height: 380px;
-        margin-bottom: 84px;
+        margin-bottom: 64px;
     }
 
     @media (max-width: vars.$mediaMobile) {
@@ -216,10 +216,10 @@
     padding: 10px 5px;
     border: none;
     background-color: unset;
-    user-select: none;
-    z-index: 3;
+    z-index: 4;
 
     @media (max-width: vars.$mediaTablet) {
+        z-index: 10;
         padding: 9px;
         border-radius: 12px;
     }
@@ -332,6 +332,12 @@
                 fill: vars.$darkBgColor;
             }
         }
+
+        @media (max-width: vars.$mediaTablet) and (hover: none) {
+            svg {
+                fill: vars.$lightBgColor;
+            }
+        }
     }
 
     .slider__target_bg {
@@ -387,7 +393,7 @@
     @media (max-width: vars.$mediaTablet) {
         bottom: unset;
         left: 22px;
-        top: 420px;
+        top: 400px;
     }
 
     @media (max-width: vars.$mediaMobile) {
@@ -410,6 +416,10 @@
             @media (hover: none) {
                 stroke: vars.$lightBgColor;
             }
+
+            @media (max-width: vars.$mediaTablet) and (hover: none) {
+                stroke: vars.$darkBgColor;
+            }
         }
     }
 
@@ -421,14 +431,14 @@
         transition: vars.$basicTrans;
 
         @media (max-width: vars.$mediaTablet) {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             stroke: vars.$darkBgColor;
         }
 
         @media (max-width: vars.$mediaMobile) {
-            width: 10px;
-            height: 10px;
+            width: 8px;
+            height: 8px;
             stroke: vars.$darkBgColor;
         }
     }
@@ -442,6 +452,10 @@
             stroke: none;
             fill: vars.$lightBgColor;
             animation: none;
+
+            @media (max-width: vars.$mediaTablet) {
+                fill: vars.$darkBgColor;
+            }
         }
     }
 
@@ -452,14 +466,14 @@
         fill: vars.$lightBgColor;
 
         @media (max-width: vars.$mediaTablet) {
-            width: 52px;
-            height: 12px;
+            width: 48px;
+            height: 10px;
             fill: vars.$darkBgColor;
         }
 
         @media (max-width: vars.$mediaMobile) {
-            width: 48px;
-            height: 10px;
+            width: 36px;
+            height: 8px;
             fill: vars.$darkBgColor;
         }
     }
