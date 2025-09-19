@@ -4,6 +4,7 @@
 .history {
     position: relative;
     margin-top: -400px;
+    z-index: 2;
     padding: 0 40px;
     margin-bottom: 456px;
     padding-top: 571px;
@@ -12,10 +13,15 @@
     height: 5683px;
 
     &__container {
+        position: relative;
+        z-index: 2;
+
         @media (max-width: vars.$mediaSmallTablet) {
             padding: 0;
         }
+
         @media (max-width: vars.$mediaMobile) {
+            padding-top: 117px;
         }
     }
 
@@ -30,12 +36,14 @@
     }
 
     @media (max-width: vars.$mediaMobile) {
-        margin-top: -50px;
-        padding-top: 12px;
-        background: url("../img/history_bg_mobile.png") top center / 100% 100%
-            no-repeat;
-        height: 7000px;
+        margin-top: 0px;
+        background: url(../img/history_bg_mobile.png) 100% 200px / 100% 7221px
+                no-repeat,
+            url(../img/seamen_memorial.png) 100% 125px / 132px 208px no-repeat;
         padding: 0;
+        margin-top: -200px;
+        padding-top: 200px;
+        z-index: 5;
     }
 }
 
@@ -48,6 +56,13 @@
 
     @media (max-width: vars.$heroChange) {
         margin-bottom: 105px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        padding: 0 15px;
+        margin-bottom: 20px;
+        text-align: start;
+        font-size: 35px;
     }
 }
 
@@ -82,7 +97,7 @@
 
     @media (max-width: vars.$mediaMobile) {
         grid-auto-rows: max-content;
-        background: url("../img/hist_route_mobile.png") 92% 135px / 100% 6938px
+        background: url("../img/hist_route_mobile.png") 92% 135px / 100% 7068px
             no-repeat;
     }
 }

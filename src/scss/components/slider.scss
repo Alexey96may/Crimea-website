@@ -15,7 +15,8 @@
 
 .slider_section {
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
 }
 
 .slider {
@@ -42,21 +43,74 @@
 .slide__wrapper {
     position: relative;
     z-index: 4;
-    width: 940px;
+    max-width: 940px;
     margin: 0 auto;
-    padding: 36px 0 36px 0; //????
+    padding: 36px 0 36px 0;
+
+    @media (max-width: vars.$heroChange) {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: min(15px, 2vw);
+        background-color: vars.$lightBgColor;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+        width: 75%;
+        border-radius: 10px;
+        padding: 39px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        display: block;
+        width: 100%;
+        padding: 0 22px 39px 22px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+    }
 }
 
 .slide__image {
-    @include mixins.position(absolute, -1, top, right, 50%, 0);
-    width: 426px;
-    height: 291px;
+    @include mixins.position(absolute, -1, top, right, 50%, 20px);
+    max-width: min(426px, 35%);
     overflow: hidden;
     border-radius: 20px;
     translate: 0 -50%;
 
     img {
         @include mixins.imgAdaptive(1.46);
+
+        @media (max-width: vars.$mediaTablet) {
+            height: 380px;
+            display: block;
+            border-radius: 12px;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            height: 226px;
+            display: block;
+            border-radius: 8px;
+        }
+    }
+
+    @media (max-width: vars.$heroChange) {
+        flex-basis: 40%;
+        translate: 0;
+        position: static;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        overflow: visible;
+        max-width: 100%;
+        height: 380px;
+        margin-bottom: 84px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        overflow: visible;
+        max-width: 100%;
+        height: 226px;
+        margin-bottom: 56px;
     }
 }
 
@@ -66,6 +120,22 @@
     padding: 48px 326px 36px 58px;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+
+    @media (max-width: vars.$heroChange) {
+        flex-basis: 60%;
+        box-shadow: none;
+        padding: 0 17px 0 0;
+        flex-grow: 1;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        box-shadow: none;
+        padding: 0 17px 0 0;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        padding: 0 17px 0 0;
+    }
 }
 
 .slide__title {
@@ -73,6 +143,21 @@
     color: vars.$darkTextColor;
     font-weight: 700;
     margin-bottom: 5px;
+
+    @media (max-width: vars.$heroChange) {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
 }
 
 .slide__subtitle {
@@ -80,6 +165,20 @@
     color: #595959;
     font-weight: 600;
     margin-bottom: 24px;
+
+    @media (max-width: vars.$heroChange) {
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        margin-bottom: 16px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        margin-bottom: 14px;
+    }
 }
 
 .slide__paragraphs {
@@ -87,6 +186,20 @@
         font-size: 15px;
         font-weight: 400;
         line-height: 1.25;
+
+        @media (max-width: vars.$heroChange) {
+            font-size: 13px;
+            line-height: 1.35;
+        }
+
+        @media (max-width: vars.$mediaTablet) {
+            font-size: 12px;
+            margin-bottom: 14px;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            line-height: 1.65;
+        }
     }
 
     p + p {
@@ -106,6 +219,15 @@
     user-select: none;
     z-index: 3;
 
+    @media (max-width: vars.$mediaTablet) {
+        padding: 9px;
+        border-radius: 12px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        border-radius: 8px;
+    }
+
     &:hover {
         svg {
             fill: vars.$mediumTextColor;
@@ -123,11 +245,34 @@
         fill: vars.$lightBgColor;
         display: block;
         transition: vars.$basicTrans;
+
+        @media (max-width: vars.$mediaTablet) {
+            width: 22px;
+            height: 22px;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            width: 14px;
+            height: 14px;
+        }
     }
 }
 
 .slider__left {
     left: 27px;
+
+    @media (max-width: vars.$mediaTablet) {
+        top: unset;
+        left: 22px;
+        bottom: -40px;
+        background-color: vars.$darkBgColor;
+        background: vars.$mainGrad;
+        z-index: 5;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        bottom: -32px;
+    }
 
     &:hover {
         svg {
@@ -145,10 +290,36 @@
 .slider__right {
     right: 27px;
 
+    @media (max-width: vars.$mediaTablet) {
+        top: unset;
+        right: unset;
+        left: 80px;
+        bottom: -40px;
+        background-color: vars.$darkBgColor;
+        background: vars.$mainGrad;
+        z-index: 5;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        left: 70px;
+        bottom: -32px;
+    }
+
     svg {
         width: 36px;
         height: 36px;
         fill: vars.$darkBgColor;
+
+        @media (max-width: vars.$mediaTablet) {
+            width: 22px;
+            height: 22px;
+            fill: vars.$lightBgColor;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            width: 14px;
+            height: 14px;
+        }
     }
 
     &:hover {
@@ -171,6 +342,34 @@
         z-index: 1;
         user-select: none;
         pointer-events: none;
+
+        @media (max-width: vars.$mediaTablet) {
+            display: none;
+        }
+    }
+}
+
+.target-bg__mobile {
+    display: none;
+    z-index: 3;
+
+    svg {
+        width: 344px;
+        height: 344px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        display: block;
+        position: absolute;
+        bottom: -22px;
+        right: -10px;
+        translate: 40% 50%;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        bottom: -22px;
+        right: -10px;
+        translate: 40% 50%;
     }
 }
 
@@ -179,6 +378,21 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
+    z-index: 8;
+
+    @media (max-width: vars.$heroChange) {
+        bottom: -40px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        bottom: unset;
+        left: 22px;
+        top: 420px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        top: 238px;
+    }
 }
 
 .slider__indicator {
@@ -205,6 +419,18 @@
         stroke: vars.$lightBgColor;
         fill: none;
         transition: vars.$basicTrans;
+
+        @media (max-width: vars.$mediaTablet) {
+            width: 12px;
+            height: 12px;
+            stroke: vars.$darkBgColor;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            width: 10px;
+            height: 10px;
+            stroke: vars.$darkBgColor;
+        }
     }
 }
 
@@ -221,8 +447,20 @@
 
     svg {
         stroke: none;
-        width: 39px;
+        width: 36px;
         height: 8px;
         fill: vars.$lightBgColor;
+
+        @media (max-width: vars.$mediaTablet) {
+            width: 52px;
+            height: 12px;
+            fill: vars.$darkBgColor;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            width: 48px;
+            height: 10px;
+            fill: vars.$darkBgColor;
+        }
     }
 }
