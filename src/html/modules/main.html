@@ -2,8 +2,11 @@
     @@include("../components/hero.html", {})
     @@include('../components/about.html', {})
     @@include('../components/map.html', {})
-    @@include('../components/socials.html', {})
+    @@include('../components/socials.html', {"classes":""})
     @@include('../components/slider.html', {})
     @@include('../components/history.html', {})
-    @@include('../components/top-places.html', {})
+    <div class="crimea__bg">
+        @@include('../components/top-places.html', {})
+        @@include('../components/socials.html', {"classes":"socials--bg"})
+    </div>
 </main>

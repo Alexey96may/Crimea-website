@@ -1,10 +1,5 @@
 @use "../base/vars";
 
-.top-places {
-}
-.container {
-}
-
 .top-places__title {
     font-size: 34px;
     color: vars.$darkTextColor;
@@ -39,37 +34,4 @@
             }
         }
     }
-}
-
-.top-places__slides {
-}
-
-.top-places__slide {
-}
-
-.top-places__slide-wrapper {
-}
-
-.top-places__slide-image {
-}
-
-.top-places__slide-text {
-}
-
-.slide__title {
-}
-
-.top-places__slide-paragraphs {
-}
-.top-places__left {
-}
-.top-places__right {
-}
-.top-places__target-bg {
-}
-.top-places__right-button {
-}
-.top-places__indicator {
-}
-.top-places__indicator--active {
 }

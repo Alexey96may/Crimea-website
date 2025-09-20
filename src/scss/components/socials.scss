@@ -8,6 +8,7 @@
 
 .socials {
     margin-bottom: 51px;
+    position: relative;
 
     &__container {
         display: flex;
@@ -50,10 +51,15 @@
 
     @media (max-width: vars.$mediaSmallTablet) {
         font-size: 16px;
+        white-space: wrap;
     }
 
     @media (max-width: vars.$mediaMobile) {
         font-size: 14px;
+    }
+
+    @media (max-width: vars.$mediaSmallMobile) {
+        font-size: 12px;
     }
 }
 
@@ -159,5 +165,24 @@
     @media (max-width: vars.$mediaMobile) {
         width: 33px;
         height: 33px;
+    }
+}
+
+.top-places__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.socials--bg {
+    padding: 85px 0 250px;
+
+    @media (max-width: vars.$mediaTablet) {
+        margin-bottom: 0px;
+        padding: 28px 0 170px;
+    }
+    @media (max-width: vars.$mediaTablet) {
+        margin-bottom: 0px;
+        padding: 28px 0 170px;
     }
 }
