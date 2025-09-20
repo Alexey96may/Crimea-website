@@ -1,0 +1,75 @@
+@use "../base/vars";
+
+.top-places {
+}
+.container {
+}
+
+.top-places__title {
+    font-size: 34px;
+    color: vars.$darkTextColor;
+    font-weight: 700;
+    text-align: center;
+    padding: 56px 0 20px;
+
+    @media (max-width: vars.$mediaTablet) {
+        font-size: 18px;
+        padding: 46px 0 0;
+    }
+}
+
+.top-places__slider {
+    .top-places__left-button {
+        fill: vars.$darkBgColor;
+
+        @media (max-width: vars.$mediaTablet) and (hover: none) {
+            fill: vars.$lightBgColor;
+        }
+    }
+
+    .top-places__bar {
+        svg {
+            stroke: vars.$darkBgColor;
+        }
+
+        .slider__indicator--active {
+            svg {
+                stroke: none;
+                fill: vars.$darkBgColor;
+            }
+        }
+    }
+}
+
+.top-places__slides {
+}
+
+.top-places__slide {
+}
+
+.top-places__slide-wrapper {
+}
+
+.top-places__slide-image {
+}
+
+.top-places__slide-text {
+}
+
+.slide__title {
+}
+
+.top-places__slide-paragraphs {
+}
+.top-places__left {
+}
+.top-places__right {
+}
+.top-places__target-bg {
+}
+.top-places__right-button {
+}
+.top-places__indicator {
+}
+.top-places__indicator--active {
+}

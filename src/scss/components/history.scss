@@ -32,13 +32,18 @@
         height: 8405px;
     }
 
+    @media (max-width: 786px) {
+        height: auto;
+        margin-bottom: 0;
+    }
+
     @media (max-width: vars.$mediaSmallTablet) {
-        height: 7405px;
+        height: auto;
+        margin-bottom: 0;
     }
 
     @media (max-width: vars.$mediaMobile) {
-        margin-top: 0px;
-        background: url(../img/history_bg_mobile.png) 100% 200px / 100% 7221px
+        background: url(../img/history_bg_mobile.png) 100% 200px / 100% 100%
                 no-repeat,
             url(../img/seamen_memorial.png) 100% 125px / 132px 208px no-repeat;
         padding: 0;
