@@ -61,7 +61,7 @@
 
     @media (max-width: vars.$mediaMobile) {
         padding: 0 15px;
-        margin-bottom: 20px;
+        margin-bottom: 85px;
         text-align: start;
         font-size: 35px;
     }
@@ -98,7 +98,7 @@
 
     @media (max-width: vars.$mediaMobile) {
         grid-auto-rows: max-content;
-        background: url("../img/hist_route_mobile.png") 92% 135px / 100% 7068px
+        background: url("../img/hist_route_mobile.png") 92% 0px / 100% 7068px
             no-repeat;
     }
 }
