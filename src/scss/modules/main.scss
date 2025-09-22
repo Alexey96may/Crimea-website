@@ -1,0 +1,19 @@
+@use "../base/vars";
+@use "../components/hero";
+@use "../components/about";
+@use "../components/map";
+@use "../components/socials";
+@use "../components/slider";
+@use "../components/history";
+@use "../components/top-places";
+@use "../components/leisure";
+@use "../components/lifehacks";
+@use "../components/gallery";
+
+.crimea__bg {
+    background: url("../img/crimea_bg.png") right bottom / 945px 697px no-repeat;
+
+    @media (max-width: vars.$mediaTablet) {
+        background: url("../img/crimea_bg.png") bottom / 409px 264px no-repeat;
+    }
+}

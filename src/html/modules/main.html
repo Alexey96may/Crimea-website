@@ -1,3 +1,15 @@
 <main>
-    <h1>Main</h1>
+    @@include("../components/hero.html", {})
+    @@include('../components/about.html', {})
+    @@include('../components/map.html', {})
+    @@include('../components/socials.html', {"classes":""})
+    @@include('../components/slider.html', {})
+    @@include('../components/history.html', {})
+    <div class="crimea__bg">
+        @@include('../components/top-places.html', {})
+        @@include('../components/socials.html', {"classes":"socials--bg"})
+    </div>
+    @@include('../components/leisure.html', {})
+    @@include('../components/lifehacks.html', {})
+    @@include('../components/gallery.html', {})
 </main>

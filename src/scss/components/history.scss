@@ -1,0 +1,111 @@
+@use "../base/vars";
+@use "../components/card";
+
+.history {
+    position: relative;
+    margin-top: -400px;
+    z-index: 2;
+    padding: 0 40px;
+    margin-bottom: 456px;
+    pointer-events: none;
+    padding-top: 530px;
+    background: url("../img/history_bg.png") top center / 100% 100% no-repeat,
+        url("../img/seamen_memorial.png") top right / 398px 626px no-repeat;
+    height: 5683px;
+
+    &__container {
+        position: relative;
+        z-index: 2;
+
+        @media (max-width: vars.$mediaSmallTablet) {
+            padding: 0;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            padding-top: 117px;
+        }
+    }
+
+    @media (max-width: vars.$heroChange) {
+        background: url("../img/history_bg_tablet.png") top center / 100% 100%
+            no-repeat;
+        height: 8405px;
+        margin-bottom: 500px;
+    }
+
+    @media (max-width: 786px) {
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        background: url(../img/history_bg_mobile.png) 100% 200px / 100% 100%
+                no-repeat,
+            url(../img/seamen_memorial.png) 100% 125px / 132px 208px no-repeat;
+        padding: 0;
+        margin-top: -200px;
+        padding-top: 200px;
+        z-index: 5;
+    }
+}
+
+.history__title {
+    font-size: 55px;
+    color: vars.$lightTextColor;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 40px;
+
+    @media (max-width: vars.$heroChange) {
+        margin-bottom: 105px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        padding: 0 15px;
+        margin-bottom: 85px;
+        text-align: start;
+        font-size: 35px;
+    }
+}
+
+.history__cards {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-auto-rows: max-content;
+    align-items: flex-start;
+    grid-column-gap: min(300px, 15vw);
+    position: relative;
+    z-index: 3;
+    background: url("../img/hist_route.png") 78% 135px / 508px 4932px no-repeat;
+
+    @media (max-width: 1300px) {
+        grid-column-gap: 150px;
+        background: url("../img/hist_route.png") 80% 135px / 508px 4932px
+            no-repeat;
+    }
+
+    @media (max-width: vars.$heroChange) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: minmax(0, 1fr);
+        justify-items: center;
+        background: url("../img/hist_route_tablet.png") 92% 135px / 508px 7309px
+            no-repeat;
+    }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        background: url("../img/hist_route_mobile.png") 92% 135px / 508px 6438px
+            no-repeat;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        grid-auto-rows: max-content;
+        background: url("../img/hist_route_mobile.png") 92% 0px / 100% 7068px
+            no-repeat;
+    }
+}

@@ -1,1 +1,67 @@
-<header>Header</header>
+<header class="header" id="header">
+    <div class="container header__container">
+        <div class="logo" aria-label="Секция логотипа">
+            <div class="logo__img-wrapper" aria-label="Логотип">
+                <svg class="logo__img">
+                    <use href="./img/icons/icons.svg#logo"></use>
+                </svg>
+            </div>
+
+            <div class="logo__text" aria-label="Текст логотипа">
+                <a href="#header" aria-label="На главную страницу">Крым</a>
+            </div>
+        </div>
+
+        <nav id="headerNav" class="nav" aria-label="Навигация">
+            <ul class="nav__list" aria-label="Navigation list">
+                <li class="nav__item">
+                    <a href="#about" aria-label="На секцию О проекте"
+                        >О проекте</a
+                    >
+                </li>
+                <li class="nav__item">
+                    <a href="#map" aria-label="На секцию Карта">Карта</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#history" aria-label="На секцию История"
+                        >История</a
+                    >
+                </li>
+                <li class="nav__item">
+                    <a href="#top-places" aria-label="На секцию Топ 5 мест"
+                        >Топ 5 мест</a
+                    >
+                </li>
+                <li class="nav__item">
+                    <a href="#lifehacks" aria-label="На секцию Топ 9 лайфхаков"
+                        >Топ 9 лайфхаков</a
+                    >
+                </li>
+            </ul>
+        </nav>
+
+        <div id="burger" class="burger" aria-label="Кнопка мобильного меню">
+            <svg
+                id="burger__img"
+                class="burger__img"
+                viewBox="0 0 32 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    class="burger__top"
+                    d="M 3 3 L 29 3 C 32 3 27 13 25 14.5 C 18.5 16 25 2 25 3 L 3 25"
+                />
+                <path
+                    class="burger__middle"
+                    d="M 29 10.5 L 3 10.5 C 0 5 1 1 9 3 L 25 19"
+                />
+                <path
+                    class="burger__bottom"
+                    d="M 30 18 L 3 18 C 1 18 1 5 4 4 C 21 9 4 20 9 19 L 25 3"
+                />
+            </svg>
+        </div>
+        <div id="bg-wrapper" class="bg-wrapper"></div>
+    </div>
+</header>

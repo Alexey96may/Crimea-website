@@ -1,0 +1,71 @@
+@use "../base/vars";
+
+.footer {
+    background-color: vars.$footerBgColor;
+    padding: 36px 0;
+
+    @media (max-width: vars.$mediaMobile) {
+        padding: 23px 0 36px;
+    }
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    @media (max-width: vars.$mediaTablet) {
+        flex-direction: column;
+        gap: 36px;
+    }
+    @media (max-width: vars.$mediaSmallTablet) {
+        align-items: flex-start;
+    }
+    @media (max-width: vars.$mediaMobile) {
+        gap: 30px;
+    }
+}
+
+.footer__logo {
+    a {
+        color: vars.$lightTextColor;
+        font-size: 24px;
+
+        @media (max-width: vars.$mediaMobile) {
+            font-size: 25px;
+        }
+    }
+
+    svg {
+        fill: vars.$lightTextColor;
+    }
+}
+
+.footer__nav {
+    @media (max-width: vars.$mediaSmallTablet) {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        background-color: inherit;
+        border-radius: unset;
+    }
+
+    a {
+        color: vars.$lightTextColor;
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .nav__list {
+        gap: min(45px, 3vw);
+
+        @media (max-width: vars.$mediaTablet) {
+            gap: min(12px, 1vw);
+        }
+        @media (max-width: vars.$mediaSmallTablet) {
+            padding: 0;
+            gap: 15px;
+        }
+    }
+}

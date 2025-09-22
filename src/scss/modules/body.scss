@@ -10,10 +10,50 @@ body {
     font-weight: 400;
     color: vars.$mainTextColor;
     background-color: vars.$lightBgColor;
+    position: relative;
+    line-height: 1.25;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.body__fixed {
+    overflow: hidden;
+}
+
+.wrapper {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    z-index: 15;
+    background-color: rgba(0, 0, 0, 0.39);
+    transition: all 1s;
 }
 
 .container {
     max-width: vars.$containerWidth;
     padding: 0 vars.$containerPadding;
     margin: 0 auto;
+}
+
+@media (hover: none) {
+    a:hover {
+        color: inherit !important;
+    }
+}
+
+@media (max-width: vars.$mediaTablet) {
+}
+
+@media (max-width: vars.$mediaSmallTablet) {
+    .wrapper--active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@media (max-width: vars.$mediaMobile) {
+}
+
+@media (max-width: vars.$mediaSmallMobile) {
 }

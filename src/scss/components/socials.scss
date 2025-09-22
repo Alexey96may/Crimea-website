@@ -1,0 +1,184 @@
+@use "../base/vars";
+
+@keyframes animWidth {
+    50% {
+        translate: -10px 0;
+        width: 116px;
+    }
+}
+
+.socials {
+    margin-bottom: 51px;
+    position: relative;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: vars.$mediaTablet) {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 12px;
+        }
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        margin-bottom: 35px;
+    }
+}
+
+.socials__title {
+    font-size: 24px;
+    color: #6b6b6b;
+    font-weight: 500;
+    padding-left: min(42px, 3vw);
+    white-space: nowrap;
+
+    @media (max-width: vars.$heroChange) {
+        font-size: 18px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        padding-left: 0;
+    }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        font-size: 16px;
+        white-space: wrap;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 14px;
+    }
+
+    @media (max-width: vars.$mediaSmallMobile) {
+        font-size: 12px;
+    }
+}
+
+.socials__bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: vars.$mediaMobile) {
+        gap: 18px;
+    }
+}
+
+.socials__arrow {
+    width: min(76px, 6vw);
+    fill: #63ab41;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 33px;
+    transition: vars.$basicTrans;
+    padding: 10px 0;
+
+    @media (max-width: vars.$mediaTablet) {
+        display: none;
+    }
+
+    &:hover {
+        animation: animWidth 1s;
+    }
+}
+
+.social {
+    width: 49px;
+    height: 49px;
+    transition: vars.$basicTrans;
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    svg {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        fill: vars.$darkBgColor;
+        transition: vars.$basicTrans;
+    }
+
+    :hover svg {
+        fill: vars.$mediumTextColor;
+
+        @media (hover: none) {
+            fill: #63ab41;
+        }
+    }
+
+    a:focus-visible {
+        outline: none;
+
+        svg {
+            fill: vars.$mediumTextColor;
+        }
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.social__vk {
+    width: 49px;
+    height: 49px;
+
+    @media (max-width: vars.$mediaMobile) {
+        width: 43px;
+        height: 43px;
+    }
+}
+
+.social__twitter {
+    width: 40px;
+    height: 41px;
+
+    @media (max-width: vars.$mediaMobile) {
+        width: 35px;
+        height: 36px;
+    }
+}
+
+.social__fb,
+.social__ok {
+    width: 37px;
+    height: 37px;
+
+    @media (max-width: vars.$mediaMobile) {
+        width: 33px;
+        height: 33px;
+    }
+}
+
+.top-places__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.socials--bg {
+    padding: 85px 0 250px;
+
+    @media (max-width: vars.$mediaTablet) {
+        margin-bottom: 0px;
+        padding: 60px 0 160px;
+    }
+    @media (max-width: vars.$mediaMobile) {
+        margin-bottom: 0px;
+        padding: 60px 0 140px;
+    }
+}

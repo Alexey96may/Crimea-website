@@ -7,10 +7,6 @@ const config = {
             maxWidth: 32,
             maxHeight: 32,
         },
-        spacing: {
-            // Add padding
-            padding: 10,
-        },
         dest: "out/intermediate-svg", // Keep the intermediate files
     },
     mode: {

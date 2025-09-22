@@ -1,0 +1,184 @@
+%svg-common {
+    background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-arrow {
+    @extend %svg-common;
+    background-position: 0 0;
+}
+
+.svg-arrow-dims {
+    width: 32px;
+    height: 3.56px;
+}
+
+.svg-big_target {
+    @extend %svg-common;
+    background-position: 0 3.56%;
+}
+
+.svg-big_target-dims {
+    width: 25.55px;
+    height: 32px;
+}
+
+.svg-facebook {
+    @extend %svg-common;
+    background-position: 27.82608695652174% 0;
+}
+
+.svg-facebook-dims {
+    width: 32px;
+    height: 32px;
+}
+
+.svg-hero_easel {
+    @extend %svg-common;
+    background-position: 55.12489233419466% 0;
+}
+
+.svg-hero_easel-dims {
+    width: 30.9px;
+    height: 32px;
+}
+
+.svg-hero_sun {
+    @extend %svg-common;
+    background-position: 0 35.56%;
+}
+
+.svg-hero_sun-dims {
+    width: 31.53px;
+    height: 32px;
+}
+
+.svg-hero_tram {
+    @extend %svg-common;
+    background-position: 27.417391304347827% 35.39364984572509%;
+}
+
+.svg-hero_tram-dims {
+    width: 32px;
+    height: 31.53px;
+}
+
+.svg-hero_vase {
+    @extend %svg-common;
+    background-position: 74.43137254901961% 0;
+}
+
+.svg-hero_vase-dims {
+    width: 19.5px;
+    height: 32px;
+}
+
+.svg-leisure_arrow {
+    @extend %svg-common;
+    background-position: 52.07377049180328% 28.677419354838708%;
+}
+
+.svg-leisure_arrow-dims {
+    width: 25px;
+    height: 8px;
+}
+
+.svg-logo {
+    @extend %svg-common;
+    background-position: 0 67.56%;
+}
+
+.svg-logo-dims {
+    width: 32px;
+    height: 32px;
+}
+
+.svg-odnoklassniki {
+    @extend %svg-common;
+    background-position: 27.82608695652174% 67.56%;
+}
+
+.svg-odnoklassniki-dims {
+    width: 32px;
+    height: 32px;
+}
+
+.svg-route {
+    @extend %svg-common;
+    background-position: 55.65217391304348% 64.22663751307158%;
+}
+
+.svg-route-dims {
+    width: 32px;
+    height: 26.81px;
+}
+
+.svg-slider_arrow_left {
+    @extend %svg-common;
+    background-position: 99.47826086956522% 0;
+}
+
+.svg-slider_arrow_left-dims {
+    width: 32px;
+    height: 32px;
+}
+
+.svg-slider_arrow_right {
+    @extend %svg-common;
+    background-position: 99.47826086956522% 32%;
+}
+
+.svg-slider_arrow_right-dims {
+    width: 32px;
+    height: 32px;
+}
+
+.svg-slider_indicator {
+    @extend %svg-common;
+    background-position: 68.27338129496403% 25.806451612903224%;
+}
+
+.svg-slider_indicator-dims {
+    width: 8px;
+    height: 8px;
+}
+
+.svg-slider_indicator_active {
+    @extend %svg-common;
+    background-position: 99.47826086956522% 51.02040816326531%;
+}
+
+.svg-slider_indicator_active-dims {
+    width: 32px;
+    height: 6.56px;
+}
+
+.svg-target {
+    @extend %svg-common;
+    background-position: 0 99.56%;
+}
+
+.svg-target-dims {
+    width: 32px;
+    height: 32px;
+}
+
+.svg-twitter {
+    @extend %svg-common;
+    background-position: 99.47826086956522% 67.84615384615384%;
+}
+
+.svg-twitter-dims {
+    width: 32px;
+    height: 28px;
+}
+
+.svg-vk {
+    @extend %svg-common;
+    background-position: 27.82608695652174% 88.05943746683177%;
+}
+
+.svg-vk-dims {
+    width: 32px;
+    height: 18.94px;
+}
+

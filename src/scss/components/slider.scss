@@ -1,0 +1,515 @@
+@use "../base/vars";
+@use "../base/mixins";
+
+@keyframes sliderButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slider_section {
+    width: 100%;
+    overflow: visible;
+    position: relative;
+}
+
+.slider {
+    position: relative;
+}
+
+.display--none {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.slide__wrapper {
+    position: relative;
+    z-index: 5;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 36px 0 36px 0;
+
+    @media (max-width: vars.$heroChange) {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: min(15px, 2vw);
+        background-color: vars.$lightBgColor;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+        width: 75%;
+        border-radius: 10px;
+        padding: 39px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 39px 22px 80px 22px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        padding: 39px 22px 39px 22px;
+    }
+
+    @media (max-width: vars.$mediaSmallMobile) {
+        padding: 39px 0;
+    }
+}
+
+.slide__image {
+    @include mixins.position(absolute, -1, top, right, 50%, 20px);
+    max-width: min(426px, 35%);
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0 auto;
+    translate: 0 -50%;
+
+    img {
+        border-radius: 20px;
+        @include mixins.imgAdaptive(1.46);
+        height: 100%;
+
+        @media (max-width: vars.$mediaTablet) {
+            display: block;
+            border-radius: 12px;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+
+    @media (max-width: vars.$heroChange) {
+        flex-basis: 40%;
+        max-width: 427px;
+        translate: 0;
+        position: static;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        overflow: visible;
+        flex-shrink: 1;
+        flex-basis: 380px;
+        height: 380px;
+        max-width: 427px;
+        margin-bottom: 64px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        height: 226px;
+        flex-basis: 226px;
+        width: 100%;
+        margin-bottom: 56px;
+    }
+}
+
+.slide__text {
+    max-width: 796px;
+    background-color: vars.$lightBgColor;
+    padding: 48px 326px 36px 58px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    @media (max-width: vars.$heroChange) {
+        flex-basis: 60%;
+        box-shadow: none;
+        padding: 0 17px 0 0;
+        flex-grow: 1;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        flex-grow: 1;
+        box-shadow: none;
+        padding: 0 17px 0 0;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        padding: 0 17px 0 0;
+    }
+}
+
+.slide__title {
+    font-size: 24px;
+    color: vars.$darkTextColor;
+    font-weight: 700;
+    margin-bottom: 5px;
+
+    @media (max-width: vars.$heroChange) {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        text-align: left;
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+}
+
+.slide__subtitle {
+    font-size: 15px;
+    color: #595959;
+    font-weight: 600;
+    margin-bottom: 24px;
+
+    @media (max-width: vars.$heroChange) {
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        margin-bottom: 14px;
+    }
+}
+
+.slide__paragraphs {
+    p {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.25;
+        margin: 0;
+
+        @media (max-width: vars.$heroChange) {
+            font-size: 13px;
+            line-height: 1.35;
+        }
+
+        @media (max-width: vars.$mediaTablet) {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            line-height: 1.65;
+        }
+    }
+
+    p + p {
+        margin-top: 1.25em;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        flex-grow: 1;
+    }
+}
+
+.slider__left,
+.slider__right {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    cursor: pointer;
+    padding: 10px 5px;
+    border: none;
+    background-color: unset;
+    z-index: 4;
+
+    @media (max-width: vars.$mediaTablet) {
+        z-index: 10;
+        padding: 9px;
+        border-radius: 12px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        border-radius: 8px;
+    }
+
+    &:hover {
+        svg {
+            fill: vars.$mediumTextColor;
+            z-index: 999;
+        }
+
+        @media (hover: none) {
+            fill: vars.$mediumTextColor;
+        }
+    }
+
+    svg {
+        width: 36px;
+        height: 36px;
+        fill: vars.$lightBgColor;
+        display: block;
+        transition: vars.$basicTrans;
+
+        @media (max-width: vars.$mediaTablet) {
+            width: 22px;
+            height: 22px;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+
+.slider__left {
+    left: 27px;
+
+    @media (max-width: vars.$mediaTablet) {
+        top: unset;
+        left: 22px;
+        bottom: -40px;
+        background-color: vars.$darkBgColor;
+        background: vars.$mainGrad;
+        z-index: 5;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        bottom: -32px;
+    }
+
+    &:hover {
+        @media (max-width: vars.$mediaTablet) {
+            animation: sliderButton 0.8s ease-out;
+        }
+
+        svg {
+            animation: sliderButton 0.8s ease-out;
+        }
+
+        @media (hover: none) {
+            svg {
+                fill: vars.$lightBgColor;
+            }
+        }
+    }
+}
+
+.slider__right {
+    right: 27px;
+
+    @media (max-width: vars.$mediaTablet) {
+        top: unset;
+        right: unset;
+        left: 80px;
+        bottom: -40px;
+        background-color: vars.$darkBgColor;
+        background: vars.$mainGrad;
+        z-index: 5;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        left: 70px;
+        bottom: -32px;
+    }
+
+    svg {
+        width: 36px;
+        height: 36px;
+        fill: vars.$darkBgColor;
+
+        @media (max-width: vars.$mediaTablet) {
+            width: 22px;
+            height: 22px;
+            fill: vars.$lightBgColor;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &:hover {
+        svg + svg {
+            animation: sliderButton 0.8s ease-out;
+        }
+
+        @media (max-width: vars.$mediaTablet) {
+            animation: sliderButton 0.8s ease-out;
+        }
+
+        @media (hover: none) {
+            svg {
+                fill: vars.$darkBgColor;
+            }
+        }
+
+        @media (max-width: vars.$mediaTablet) and (hover: none) {
+            svg {
+                fill: vars.$lightBgColor;
+            }
+        }
+    }
+
+    .slider__target_bg {
+        @include mixins.position(absolute, -1, top, left, 50%, 50%);
+        translate: -50% -50%;
+        width: 344px;
+        height: 344px;
+        z-index: 1;
+        user-select: none;
+        pointer-events: none;
+
+        @media (max-width: vars.$mediaTablet) {
+            display: none;
+        }
+    }
+}
+
+.target-bg__mobile {
+    display: none;
+    z-index: 3;
+
+    svg {
+        width: 344px;
+        height: 344px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        display: block;
+        position: absolute;
+        bottom: -22px;
+        right: -10px;
+        translate: 40% 50%;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        bottom: -22px;
+        right: -10px;
+        translate: 40% 50%;
+    }
+}
+
+.slider__bar {
+    @include mixins.position(absolute, -1, bottom, left, 0, 188px);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    z-index: 8;
+
+    @media (max-width: vars.$heroChange) {
+        @include mixins.position(absolute, -1, bottom, left, 0, 50%);
+        translate: -50% 0;
+        bottom: -40px;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        bottom: unset;
+        top: 440px;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        bottom: unset;
+        left: 22px;
+        translate: 0;
+        top: 280px;
+    }
+
+    @media (max-width: vars.$mediaSmallMobile) {
+        left: 0;
+    }
+}
+
+.slider__indicator {
+    cursor: pointer;
+    padding: 2px 4px;
+    border: none;
+    background-color: unset;
+    user-select: none;
+
+    &:hover {
+        svg {
+            stroke: vars.$mediumTextColor;
+            animation: sliderButton 0.8s ease-out;
+
+            @media (hover: none) {
+                stroke: vars.$lightBgColor;
+            }
+
+            @media (max-width: vars.$mediaTablet) and (hover: none) {
+                stroke: vars.$darkBgColor;
+            }
+        }
+    }
+
+    svg {
+        width: 8px;
+        height: 8px;
+        stroke: vars.$lightBgColor;
+        fill: none;
+        transition: vars.$basicTrans;
+
+        @media (max-width: vars.$mediaTablet) {
+            width: 10px;
+            height: 10px;
+            stroke: vars.$darkBgColor;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            width: 8px;
+            height: 8px;
+            stroke: vars.$darkBgColor;
+        }
+    }
+}
+
+.slider__indicator--active {
+    &:hover {
+        cursor: auto;
+
+        svg {
+            stroke: none;
+            fill: vars.$lightBgColor;
+            animation: none;
+
+            @media (max-width: vars.$mediaTablet) {
+                fill: vars.$darkBgColor;
+            }
+        }
+    }
+
+    svg {
+        stroke: none;
+        width: 39px;
+        height: 8px;
+        fill: vars.$lightBgColor;
+
+        @media (max-width: vars.$mediaTablet) {
+            width: 48px;
+            height: 10px;
+            fill: vars.$darkBgColor;
+        }
+
+        @media (max-width: vars.$mediaMobile) {
+            width: 39px;
+            height: 8px;
+            fill: vars.$darkBgColor;
+        }
+    }
+}
