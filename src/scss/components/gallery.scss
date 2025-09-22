@@ -61,8 +61,19 @@
     background-color: vars.$lightBgColor;
     border-radius: 10px;
 
+    &:hover {
+        animation: sliderButton 0.8s ease-out;
+    }
+
     .gallery__left-button {
         fill: vars.$darkBgColor;
+
+        @media (max-width: vars.$mediaTablet) {
+            fill: vars.$lightBgColor;
+        }
+        &:hover {
+            animation: none;
+        }
     }
 
     @media (max-width: vars.$mediaTablet) {
@@ -85,6 +96,10 @@
     background-color: vars.$lightBgColor;
     border-radius: 10px;
 
+    &:hover {
+        animation: sliderButton 0.8s ease-out;
+    }
+
     @media (max-width: vars.$mediaTablet) {
         top: unset;
         left: unset;
@@ -105,7 +120,7 @@
 
     @media (max-width: vars.$mediaTablet) {
         left: 27px;
-        bottom: 20px;
+        bottom: 30px;
         translate: 0;
         gap: 8px;
     }
@@ -113,23 +128,23 @@
         bottom: 38px;
         gap: 5px;
     }
-}
 
-.slider__indicator {
-    svg {
-        stroke: vars.$darkBgColor;
-    }
-}
-
-.slider__indicator--active {
-    svg {
-        stroke: none;
-        fill: vars.$darkBgColor;
-    }
-
-    &:hover {
+    .slider__indicator {
         svg {
+            stroke: vars.$darkBgColor;
+        }
+    }
+
+    .slider__indicator--active {
+        svg {
+            stroke: none;
             fill: vars.$darkBgColor;
+        }
+
+        &:hover {
+            svg {
+                fill: vars.$darkBgColor;
+            }
         }
     }
 }

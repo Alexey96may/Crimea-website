@@ -8,7 +8,7 @@
     padding: 0 40px;
     margin-bottom: 456px;
     pointer-events: none;
-    padding-top: 571px;
+    padding-top: 530px;
     background: url("../img/history_bg.png") top center / 100% 100% no-repeat,
         url("../img/seamen_memorial.png") top right / 398px 626px no-repeat;
     height: 5683px;
@@ -30,6 +30,7 @@
         background: url("../img/history_bg_tablet.png") top center / 100% 100%
             no-repeat;
         height: 8405px;
+        margin-bottom: 500px;
     }
 
     @media (max-width: 786px) {
@@ -59,6 +60,7 @@
     font-weight: 700;
     text-align: center;
     margin-bottom: 15px;
+    padding-top: 40px;
 
     @media (max-width: vars.$heroChange) {
         margin-bottom: 105px;

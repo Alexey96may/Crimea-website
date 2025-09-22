@@ -6,6 +6,9 @@
     position: relative;
     z-index: 1;
 
+    @media (max-width: vars.$mediaTablet) {
+        margin-top: -100px;
+    }
     @media (max-width: vars.$mediaMobile) {
         margin-bottom: 35px;
     }

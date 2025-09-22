@@ -1,7 +1,8 @@
 @use "../base/vars";
 
 .map {
-    margin: -280px 0 53px 0;
+    margin: -320px 0 53px 0;
+    padding-top: 40px;
 
     @media (max-width: vars.$heroChange) {
         margin: 0 0 40px 0;

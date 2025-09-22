@@ -8,8 +8,11 @@
     padding: 56px 0 20px;
 
     @media (max-width: vars.$mediaTablet) {
-        font-size: 18px;
+        font-size: 26px;
         padding: 46px 0 0;
+    }
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 18px;
     }
 }
 
@@ -17,6 +20,9 @@
     .top-places__left-button {
         fill: vars.$darkBgColor;
 
+        @media (max-width: vars.$mediaTablet) {
+            fill: vars.$lightBgColor;
+        }
         @media (max-width: vars.$mediaTablet) and (hover: none) {
             fill: vars.$lightBgColor;
         }

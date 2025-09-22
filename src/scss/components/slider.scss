@@ -163,7 +163,7 @@
     @media (max-width: vars.$mediaTablet) {
         text-align: center;
         font-size: 20px;
-        margin-bottom: 12px;
+        margin-bottom: 18px;
     }
 
     @media (max-width: vars.$mediaMobile) {
@@ -294,6 +294,10 @@
     }
 
     &:hover {
+        @media (max-width: vars.$mediaTablet) {
+            animation: sliderButton 0.8s ease-out;
+        }
+
         svg {
             animation: sliderButton 0.8s ease-out;
         }
@@ -343,6 +347,10 @@
 
     &:hover {
         svg + svg {
+            animation: sliderButton 0.8s ease-out;
+        }
+
+        @media (max-width: vars.$mediaTablet) {
             animation: sliderButton 0.8s ease-out;
         }
 
@@ -488,7 +496,7 @@
 
     svg {
         stroke: none;
-        width: 36px;
+        width: 39px;
         height: 8px;
         fill: vars.$lightBgColor;
 
@@ -499,7 +507,7 @@
         }
 
         @media (max-width: vars.$mediaMobile) {
-            width: 36px;
+            width: 39px;
             height: 8px;
             fill: vars.$darkBgColor;
         }

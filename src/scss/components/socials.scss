@@ -2,6 +2,7 @@
 
 @keyframes animWidth {
     50% {
+        translate: -10px 0;
         width: 116px;
     }
 }
@@ -88,11 +89,6 @@
 
     &:hover {
         animation: animWidth 1s;
-        fill: vars.$mediumTextColor;
-
-        @media (hover: none) {
-            fill: #63ab41;
-        }
     }
 }
 
@@ -179,10 +175,10 @@
 
     @media (max-width: vars.$mediaTablet) {
         margin-bottom: 0px;
-        padding: 28px 0 170px;
+        padding: 60px 0 160px;
     }
-    @media (max-width: vars.$mediaTablet) {
+    @media (max-width: vars.$mediaMobile) {
         margin-bottom: 0px;
-        padding: 28px 0 170px;
+        padding: 60px 0 140px;
     }
 }

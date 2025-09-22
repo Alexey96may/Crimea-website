@@ -2,8 +2,11 @@
 
 .header {
     padding: 21px 0;
-    position: relative;
-    z-index: 9;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 19;
 
     &__container {
         display: flex;
@@ -182,14 +185,14 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 15px;
-        padding: 15px;
+        gap: 20px;
+        padding: 15px 15px 48px;
     }
 
     .appear {
         visibility: visible;
         opacity: 1;
-        top: 94px;
+        top: 86px;
     }
 }
 
@@ -212,6 +215,20 @@
     }
 
     .appear {
-        top: 79px;
+        top: 72px;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 15px 15px 48px;
+    }
+}
+
+@media (max-width: 280px) {
+    .nav {
+        border-radius: 0 0 15px 15px;
     }
 }

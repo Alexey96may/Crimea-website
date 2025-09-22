@@ -53,7 +53,7 @@
     translate: -50% -50%;
     height: 153px;
     width: 153px;
-    z-index: 9999;
+    z-index: 12;
 
     @media (max-width: vars.$heroChange) {
         height: 124px;
