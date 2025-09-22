@@ -2,17 +2,24 @@
 
 .header {
     padding: 21px 0;
-    position: sticky;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
+    position: relative;
+    background-color: vars.$lightBgColor;
     z-index: 19;
+    width: 100%;
+    transition: vars.$basicTrans;
 
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
     }
+}
+
+.header--fixed {
+    position: sticky;
+    top: -228px;
+    left: 0;
+    width: 100%;
 }
 
 .bg-wrapper {
@@ -171,8 +178,8 @@
         visibility: hidden;
         max-height: calc(100vh - 95px);
         overflow: auto;
+        position: absolute;
         opacity: 0;
-        position: fixed;
         top: -500px;
         left: 0;
         width: 100%;

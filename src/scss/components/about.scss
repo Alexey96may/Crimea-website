@@ -73,7 +73,7 @@
     white-space: nowrap;
     @include mixins.position(absolute, -1, top, left, 50%, 50%);
     translate: -50% -50%;
-    z-index: 99;
+    z-index: 14;
 
     @media (max-width: vars.$containerWidth) {
         left: calc(50% - 2vw);
