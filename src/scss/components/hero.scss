@@ -16,14 +16,14 @@
     }
 
     @media (max-width: vars.$mediaSmallTablet) {
-        margin-bottom: 42px;
-        background: url("../img/mountains_bg.png") left bottom / 550px 500px
+        margin-bottom: 0;
+        background: url("../img/mountains_bg.png") left bottom / 540px 400px
             no-repeat;
     }
 
     @media (max-width: vars.$mediaMobile) {
         margin-bottom: 34px;
-        background: url("../img/mountains_bg.png") left bottom / 520px 427px
+        background: url("../img/mountains_bg.png") left bottom / 520px 340px
             no-repeat;
     }
 }
@@ -178,7 +178,6 @@
     align-items: center;
     column-gap: min(47px, 5vw);
     row-gap: min(34px, 5vw);
-
     max-width: 1270px;
     padding: 0 vars.$containerPadding 0 400px;
     margin: 0 auto;
@@ -193,11 +192,11 @@
     }
 
     @media (max-width: vars.$mediaSmallTablet) {
-        padding: 140px 36px 50px;
+        padding: 79px 36px 30px;
     }
 
     @media (max-width: vars.$mediaMobile) {
-        padding: 79px 25px;
+        padding: 79px 25px 30px;
     }
 }
 
