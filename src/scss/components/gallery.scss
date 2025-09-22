@@ -6,16 +6,17 @@
 
 .gallery__slider {
     position: relative;
-    background: url("../img/icons/icons.svg#target") bottom left / 359px 358px
+    background: url("../img/gallery_target.png") bottom left / 359px 358px
         no-repeat;
     z-index: 2;
-    max-width: 1400px;
+    max-width: 1350px;
     margin: 0 auto;
-    padding: 0 12px 92px;
+    padding: 0 0 92px;
 
     @media (max-width: vars.$mediaTablet) {
         background: none;
         padding: 0 0 92px;
+        margin-bottom: 25px;
     }
 }
 

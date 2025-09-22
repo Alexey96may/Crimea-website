@@ -37,7 +37,7 @@
     border-radius: 20px;
     padding: 21px 23px 26px;
     max-width: 387px;
-    height: 448px;
+    height: 450px;
 
     display: flex;
     flex-direction: column;
@@ -130,6 +130,7 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         transition: vars.$basicTrans;
+        padding: 12px 0;
 
         &:hover,
         &:focus-visible {
@@ -140,11 +141,6 @@
                 outline: none;
                 transform: scaleX(2);
                 margin-left: 12px;
-                fill: vars.$darkTextColor;
-
-                @media (hover: none) {
-                    fill: vars.$darkBgColor;
-                }
             }
 
             @media (hover: none) {
