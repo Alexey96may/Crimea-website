@@ -1,0 +1,134 @@
+@use "../base/vars";
+
+.gallery {
+    margin-top: -100px;
+}
+
+.gallery__slider {
+    position: relative;
+    background: url("../img/icons/icons.svg#target") bottom left / 359px 358px
+        no-repeat;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 12px 92px;
+
+    @media (max-width: vars.$mediaTablet) {
+        background: none;
+        padding: 0 0 92px;
+    }
+}
+
+.gallery__slide {
+    width: 100%;
+    background-color: vars.$lightBgColor;
+    padding: 20px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    @media (max-width: vars.$mediaTablet) {
+        border-radius: 16px;
+    }
+    @media (max-width: vars.$mediaMobile) {
+        padding: 12px;
+        border-radius: 10px;
+    }
+}
+
+.gallery__img-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery__img {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: vars.$mediaTablet) {
+        border-radius: 16px;
+    }
+    @media (max-width: vars.$mediaMobile) {
+        border-radius: 10px;
+    }
+}
+
+.gallery__left {
+    left: 0;
+    padding: 12px;
+    background-color: vars.$lightBgColor;
+    border-radius: 10px;
+
+    .gallery__left-button {
+        fill: vars.$darkBgColor;
+    }
+
+    @media (max-width: vars.$mediaTablet) {
+        top: unset;
+        left: unset;
+        right: 0;
+        bottom: 20px;
+        right: 87px;
+        translate: 0;
+    }
+    @media (max-width: vars.$mediaMobile) {
+        right: 75px;
+        bottom: 30px;
+    }
+}
+
+.gallery__right {
+    right: 0;
+    padding: 12px;
+    background-color: vars.$lightBgColor;
+    border-radius: 10px;
+
+    @media (max-width: vars.$mediaTablet) {
+        top: unset;
+        left: unset;
+        right: 27px;
+        bottom: 20px;
+        translate: 0;
+    }
+    @media (max-width: vars.$mediaMobile) {
+        bottom: 30px;
+    }
+}
+
+.gallery__bar {
+    top: unset;
+    bottom: 50px;
+    left: 50%;
+    translate: -50% 0;
+
+    @media (max-width: vars.$mediaTablet) {
+        left: 27px;
+        bottom: 20px;
+        translate: 0;
+        gap: 8px;
+    }
+    @media (max-width: vars.$mediaMobile) {
+        bottom: 38px;
+        gap: 5px;
+    }
+}
+
+.slider__indicator {
+    svg {
+        stroke: vars.$darkBgColor;
+    }
+}
+
+.slider__indicator--active {
+    svg {
+        stroke: none;
+        fill: vars.$darkBgColor;
+    }
+
+    &:hover {
+        svg {
+            fill: vars.$darkBgColor;
+        }
+    }
+}

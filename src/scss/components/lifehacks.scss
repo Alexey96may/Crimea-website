@@ -27,7 +27,9 @@
 
         @media (max-width: vars.$mediaTablet) {
             background: url("../img/lifehacks_bg_mobile.png") top / 100% 2992px
-                no-repeat;
+                    no-repeat,
+                url("../img/icons/icons.svg#target") 150% 100% / 359px 358px
+                    no-repeat;
         }
     }
 }
