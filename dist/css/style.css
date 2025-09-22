@@ -405,6 +405,7 @@ body {
   background-position: 0% 0%;
   background: linear-gradient(#ffffff 50%, #86cd65 50%, #63ab41 100%);
   background-size: 200% 200%;
+  box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.15);
 }
 .card-hero:first-child {
   z-index: 9;
@@ -424,11 +425,6 @@ body {
 }
 .card-hero:hover svg {
   fill: #87ce66;
-}
-@media (max-width: 992px) {
-  .card-hero {
-    box-shadow: 4px 4px 50px rgba(0, 0, 0, 0.15);
-  }
 }
 @media (max-width: 767px) {
   .card-hero {
@@ -1559,6 +1555,7 @@ body {
 }
 @media (max-width: 575px) {
   .slide__subtitle {
+    text-align: left;
     margin-bottom: 14px;
   }
 }
@@ -2920,11 +2917,13 @@ body {
   font-weight: 700;
   text-align: center;
   padding: 56px 0 20px;
+  margin-bottom: 55px;
 }
 @media (max-width: 992px) {
   .top-places__title {
     font-size: 26px;
     padding: 46px 0 0;
+    margin-bottom: 34px;
   }
 }
 @media (max-width: 575px) {
