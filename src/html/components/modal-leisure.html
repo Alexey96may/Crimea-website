@@ -1,0 +1,41 @@
+<section class="modal-leisure @@classes">
+    <div class="container modal-leisure__container">
+        <h3 class="modal-leisure__title">@@title</h2>
+        <div class="modal-leisure__descr-wrapper">
+            @@for (var i = 0; i < paragraphs.length; i++) {
+            <p>`+paragraphs[i]+`</p>
+            }
+        </div>
+
+        @@if (list.length != 0) {
+        <div class="modal-leisure__list">
+        @@for (var i = 0; i < list.length; i++) {
+            <div class="modal-leisure__list-item">
+                <h4 class="modal-leisure__list-title">`+list[i]["title"]+`</h4>
+                <p class="modal-leisure__list-descr">`+list[i]["descr"]+`</p>
+            </div>
+        }
+        }
+
+    </div>
+
+                
+    <button class="modal-button" aria-label="Кнопка закрытия">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_@@svgID)">
+            <path d="M11.8323 9.67197L19.6199 2.15239C20.1267 1.66327 20.1267 0.872435 19.6199 0.383318C19.1134 -0.1058 18.2943 -0.1058 17.7877 0.383318L9.9999 7.9029L2.21229 0.383318C1.70548 -0.1058 0.88667 -0.1058 0.380103 0.383318C-0.126701 0.872435 -0.126701 1.66327 0.380103 2.15239L8.16771 9.67197L0.380103 17.1916C-0.126701 17.6807 -0.126701 18.4715 0.380103 18.9606C0.632556 19.2046 0.964494 19.3272 1.29619 19.3272C1.6279 19.3272 1.9596 19.2046 2.21229 18.9606L9.9999 11.441L17.7877 18.9606C18.0404 19.2046 18.3721 19.3272 18.7038 19.3272C19.0355 19.3272 19.3672 19.2046 19.6199 18.9606C20.1267 18.4715 20.1267 17.6807 19.6199 17.1916L11.8323 9.67197Z" fill="url(#paint0_linear_@@svgID)"/>
+            </g>
+            <defs>
+            <linearGradient id="paint0_linear_@@svgID" x1="1.04791" y1="1.69204" x2="18.0676" y2="19.8926" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#87CE66"/>
+            <stop offset="1" stop-color="#63AB41"/>
+            </linearGradient>
+            <clipPath id="clip0_@@svgID">
+            <rect width="20" height="19.3111" fill="white"/>
+            </clipPath>
+            </defs>
+        </svg>
+    </button>
+    </div>
+
+</section>

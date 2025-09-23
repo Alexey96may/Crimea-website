@@ -1,0 +1,107 @@
+@use "../base/vars";
+
+.modal-leisure {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 20;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: vars.$basicTrans;
+
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        overflow-y: auto;
+        width: 90vw;
+        max-height: 90vh;
+        border-radius: 20px;
+        background-color: vars.$lightBgColor;
+        padding: 28px 48px 28px 28px;
+    }
+}
+
+.modal-leisure__title {
+    font-size: 24px;
+    font-family: Gilroy;
+    color: vars.$darkTextColor;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 1em;
+
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 18px;
+    }
+}
+
+.modal-leisure__descr-wrapper {
+    margin-bottom: 60px;
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.25;
+
+        @media (max-width: vars.$mediaMobile) {
+            font-size: 18px;
+        }
+    }
+}
+
+.modal-leisure__list-item {
+    font-size: 15px;
+
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 12px;
+    }
+
+    & + & {
+        margin-top: 1.5em;
+    }
+}
+
+.modal-leisure__list-title,
+.modal-leisure__list-descr {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.25;
+
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 12px;
+    }
+}
+
+.modal-leisure__list-title {
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.modal-button {
+    position: fixed;
+    top: 40px;
+    right: 25px;
+    width: 20px;
+    height: 20px;
+    background-color: unset;
+    border: none;
+    padding: 0;
+
+    @media (max-width: vars.$mediaMobile) {
+        font-size: 12px;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.modal_appear {
+    visibility: visible;
+    opacity: 1;
+}

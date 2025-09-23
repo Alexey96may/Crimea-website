@@ -10,6 +10,11 @@
 @use "../components/lifehacks";
 @use "../components/gallery";
 
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
 .crimea__bg {
     background: url("../img/crimea_bg.png") right bottom / 945px 697px no-repeat;
 
