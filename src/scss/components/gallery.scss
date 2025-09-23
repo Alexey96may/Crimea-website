@@ -20,6 +20,11 @@
     }
 }
 
+.webp .gallery__slider {
+    background: url("../img/gallery_target.webp") bottom left / 359px 358px
+        no-repeat;
+}
+
 .gallery__slide {
     width: 100%;
     background-color: vars.$lightBgColor;

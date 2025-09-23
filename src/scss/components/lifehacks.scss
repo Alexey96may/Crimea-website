@@ -49,6 +49,25 @@
     }
 }
 
+.webp .lifehacks {
+    &::after {
+        background: url("../img/lifehacks_bg.webp") top / 100% 1533px no-repeat;
+
+        @media (max-width: vars.$mediaTablet) {
+            background: url("../img/lifehacks_bg_mobile.webp") top / 100% 2992px
+                    no-repeat,
+                url("../img/icons/icons.svg#target") 125% 100% / 359px 358px
+                    no-repeat;
+        }
+        @media (max-width: vars.$mediaMobile) {
+            background: url("../img/lifehacks_bg_mobile.webp") top / 100% 2992px
+                    no-repeat,
+                url("../img/icons/icons.svg#target") bottom right / 359px 358px
+                    no-repeat;
+        }
+    }
+}
+
 .lifehacks_route {
     position: absolute;
     top: 50px;

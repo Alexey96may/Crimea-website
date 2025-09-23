@@ -28,6 +28,24 @@
     }
 }
 
+.webp .hero {
+    @media (max-width: vars.$heroChange) {
+        background: url("../img/mountains_bg.webp") left bottom / 601px 601px
+            no-repeat;
+        background-attachment: scroll;
+    }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        background: url("../img/mountains_bg.webp") left bottom / 540px 400px
+            no-repeat;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        background: url("../img/mountains_bg.webp") left bottom / 520px 340px
+            no-repeat;
+    }
+}
+
 .hero__container {
     margin: 0 auto;
     max-width: 1330px;
@@ -131,12 +149,12 @@
     @media (max-width: vars.$heroChange) {
         font-size: 50px;
         color: #2e2e2e;
-        margin-bottom: 14px;
+        margin-bottom: 5px;
     }
 
     @media (max-width: vars.$mediaSmallTablet) {
         font-size: 45px;
-        margin-bottom: 10px;
+        margin-bottom: 3px;
     }
 
     @media (max-width: vars.$mediaMobile) {
@@ -229,6 +247,13 @@
     z-index: 5;
     user-select: none;
     pointer-events: none;
+}
+
+.webp .route-bg {
+    background: url("../img/route.webp");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% 100%;
 }
 
 .router {

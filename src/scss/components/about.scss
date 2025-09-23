@@ -32,6 +32,12 @@
     }
 }
 
+.webp .about {
+    background: url("../img/icons/icons.svg#big_target") right bottom / 466px
+            466px no-repeat,
+        url("../img/mountains_bg.webp") left bottom / 601px 601px no-repeat;
+}
+
 .about__title-wrapper {
     height: 650px;
     flex-basis: 33.33%;

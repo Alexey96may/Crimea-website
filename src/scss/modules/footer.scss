@@ -28,12 +28,21 @@
 }
 
 .footer__logo {
+    color: vars.$lightTextColor;
+
     a {
         color: vars.$lightTextColor;
         font-size: 24px;
 
         @media (max-width: vars.$mediaMobile) {
             font-size: 25px;
+        }
+
+        @media (hover: none) {
+            &:hover,
+            &:focus-visible {
+                color: vars.$lightTextColor;
+            }
         }
     }
 
@@ -43,6 +52,10 @@
 }
 
 .footer__nav {
+    .nav__item {
+        color: vars.$lightTextColor;
+    }
+
     @media (max-width: vars.$mediaSmallTablet) {
         position: static;
         visibility: visible;
@@ -55,6 +68,13 @@
         color: vars.$lightTextColor;
         font-size: 14px;
         padding: 0;
+
+        @media (hover: none) {
+            &:hover,
+            &:focus-visible {
+                color: vars.$lightTextColor;
+            }
+        }
     }
 
     .nav__list {

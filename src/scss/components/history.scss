@@ -54,6 +54,22 @@
     }
 }
 
+.webp .history {
+    background: url("../img/history_bg.webp") top center / 100% 100% no-repeat,
+        url("../img/seamen_memorial.webp") top right / 398px 626px no-repeat;
+
+    @media (max-width: vars.$heroChange) {
+        background: url("../img/history_bg_tablet.webp") top center / 100% 100%
+            no-repeat;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        background: url(../img/history_bg_mobile.webp) 100% 200px / 100% 100%
+                no-repeat,
+            url(../img/seamen_memorial.webp) 100% 125px / 132px 208px no-repeat;
+    }
+}
+
 .history__title {
     font-size: 55px;
     color: vars.$lightTextColor;
@@ -106,6 +122,30 @@
     @media (max-width: vars.$mediaMobile) {
         grid-auto-rows: max-content;
         background: url("../img/hist_route_mobile.png") 92% 0px / 100% 7068px
+            no-repeat;
+    }
+}
+
+.webp .history__cards {
+    background: url("../img/hist_route.webp") 78% 135px / 508px 4932px no-repeat;
+
+    @media (max-width: 1300px) {
+        background: url("../img/hist_route.webp") 80% 135px / 508px 4932px
+            no-repeat;
+    }
+
+    @media (max-width: vars.$heroChange) {
+        background: url("../img/hist_route_tablet.webp") 92% 135px / 508px
+            7309px no-repeat;
+    }
+
+    @media (max-width: vars.$mediaSmallTablet) {
+        background: url("../img/hist_route_mobile.webp") 92% 135px / 508px
+            6438px no-repeat;
+    }
+
+    @media (max-width: vars.$mediaMobile) {
+        background: url("../img/hist_route_mobile.webp") 92% 0px / 100% 7068px
             no-repeat;
     }
 }

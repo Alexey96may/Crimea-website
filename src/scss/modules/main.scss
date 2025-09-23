@@ -17,3 +17,12 @@
         background: url("../img/crimea_bg.png") bottom / 409px 264px no-repeat;
     }
 }
+
+.webp .crimea__bg {
+    background: url("../img/crimea_bg.webp") right bottom / 945px 697px
+        no-repeat;
+
+    @media (max-width: vars.$mediaTablet) {
+        background: url("../img/crimea_bg.webp") bottom / 409px 264px no-repeat;
+    }
+}
