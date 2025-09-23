@@ -23,6 +23,10 @@
 .webp .gallery__slider {
     background: url("../img/gallery_target.webp") bottom left / 359px 358px
         no-repeat;
+
+    @media (max-width: vars.$mediaTablet) {
+        background: none;
+    }
 }
 
 .gallery__slide {

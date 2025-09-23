@@ -919,6 +919,11 @@ body {
 .webp .about {
   background: url("../img/icons/icons.svg#big_target") right bottom/466px 466px no-repeat, url("../img/mountains_bg.webp") left bottom/601px 601px no-repeat;
 }
+@media (max-width: 1165px) {
+  .webp .about {
+    background: none;
+  }
+}
 
 .about__title-wrapper {
   height: 650px;
@@ -3488,6 +3493,11 @@ body {
 
 .webp .gallery__slider {
   background: url("../img/gallery_target.webp") bottom left/359px 358px no-repeat;
+}
+@media (max-width: 992px) {
+  .webp .gallery__slider {
+    background: none;
+  }
 }
 
 .gallery__slide {

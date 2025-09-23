@@ -36,6 +36,10 @@
     background: url("../img/icons/icons.svg#big_target") right bottom / 466px
             466px no-repeat,
         url("../img/mountains_bg.webp") left bottom / 601px 601px no-repeat;
+
+    @media (max-width: vars.$heroChange) {
+        background: none;
+    }
 }
 
 .about__title-wrapper {
