@@ -56,6 +56,11 @@
 .about__text-centrator {
     position: relative;
     background-color: vars.$lightBgColor;
+    padding: 0 7.3px;
+
+    @media (max-width: vars.$mediaMobile) {
+        padding: 0 4.5px;
+    }
 }
 
 .about__target-img {

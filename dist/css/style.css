@@ -941,6 +941,12 @@ body {
 .about__text-centrator {
   position: relative;
   background-color: #ffffff;
+  padding: 0 7.3px;
+}
+@media (max-width: 575px) {
+  .about__text-centrator {
+    padding: 0 4.5px;
+  }
 }
 
 .about__target-img {
