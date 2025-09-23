@@ -3050,6 +3050,11 @@ body {
   background-color: #ffffff;
   padding: 28px 48px 28px 28px;
 }
+@media (max-width: 575px) {
+  .modal-leisure__container {
+    padding: 20px 20px 25px;
+  }
+}
 
 .modal-leisure__title {
   font-size: 24px;
@@ -3068,16 +3073,21 @@ body {
 .modal-leisure__descr-wrapper {
   margin-bottom: 60px;
 }
+@media (max-width: 575px) {
+  .modal-leisure__descr-wrapper {
+    margin-bottom: 50px;
+  }
+}
 .modal-leisure__descr-wrapper p {
   margin: 0;
   padding: 0;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.25;
 }
 @media (max-width: 575px) {
   .modal-leisure__descr-wrapper p {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
